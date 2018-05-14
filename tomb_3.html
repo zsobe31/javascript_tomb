@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, 
+  initial-scale=1.0">
+  <title>Javascript alapok</title>
+  <link rel="stylesheet" href="tomb_1.css">
+
+  <script>
+  
+    function szamsorrend(a, b) {
+      if ( a > b) {
+          return 1;
+          }
+      else if ( a < b) {
+          return -1;
+      }
+      else {
+          return 0;
+      }
+    }
+  
+    function veletlen(a, b) {
+      return 0.5 - Math.random();
+    }
+  
+  </script>
+
+</head>
+
+<body>
+
+  <script>
+   
+    var gyumolcsok = [" banán", " narancs", " alma", " szilva"];
+    gyumolcsok.unshift(" körte", " barack");
+    
+    document.write('Gyümölcsök: ');
+    for ( i = 0; i < gyumolcsok.length; i++) {
+      document.write(gyumolcsok[i] + ' ');
+    }    
+      
+    document.write('<br><br>');
+    
+    gyumolcsok.sort();
+    
+    document.write('Gyümölcsök ABC szerint: ');
+    for ( i = 0; i < gyumolcsok.length; i++) {
+      document.write(gyumolcsok[i] + ' ');
+    }    
+      
+    document.write('<br><br>');
+    
+    var szamok = [];
+    
+    for ( i = 1; i <= 15; i++) {
+      szamok [i - 1] = i;
+    }
+    
+    szamok.push(23,43,45,76,45,34,12,43);
+    
+    document.write('Számok: ');
+    for ( i = 0; i < szamok.length; i++) {
+      document.write(szamok[i] + ' ');
+    }
+    
+    document.write('<br><br>');
+
+    szamok.sort();
+    
+    document.write('Számok sorrendben: ');
+    for ( i = 0; i < szamok.length; i++) {
+      document.write(szamok[i] + ' ');
+    }
+    
+    document.write('<br><br>');
+
+    szamok.sort(szamsorrend);
+    
+    document.write('Számok sorrendben: ');
+    for ( i = 0; i < szamok.length; i++) {
+      document.write(szamok[i] + ' ');
+    }
+    
+    document.write('<br><br>');
+
+    szamok.sort(szamsorrend);
+    szamok.reverse();
+    
+    document.write('Számok csökkenő sorrendben: ');
+    for ( i = 0; i < szamok.length; i++) {
+      document.write(szamok[i] + ' ');
+    }
+    
+    document.write('<br><br>');
+
+    szamok.sort(veletlen);
+    
+    document.write('Számok véletlen sorrendben: ');
+    for ( i = 0; i < szamok.length; i++) {
+      document.write(szamok[i] + ' ');
+    }
+    
+  </script>
+  
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, 
+  initial-scale=1.0">
+  <title>Javascript alapok</title>
+  <link rel="stylesheet" href="tomb_1.css">
+
+  <script>
+
+  </script>
+</head>
+
+<body>
+
+<script>
+  
+  var autok = ["Fiat", "Vw", "Nissan", "Audi", "Opel"];
+  
+  document.write(autok + '<br><br>');
+  
+  // utolsó elem törlése, majd tárolása a torolve változóban!
+  var torolve = autok.pop(); 
+  
+  document.write('Törölve: ' + torolve + ', maradt: ' + autok + '<br><br>');
+  
+  // első elem törlése, majd tárolása a torolve változóban! 
+  torolve = autok.shift(); 
+  
+  document.write('Törölve: ' + torolve + ', maradt: ' + autok + '<br><br>');  
+  
+  // elemek törlése, majd tárolása a torolve változóban!
+  torolve = autok.splice(1, 1, "BMW", "Ford"); //mettől - hány darabot! Új elemek beszúrása!
+  
+  document.write('Törölve: ' + torolve + ', maradt: ' + autok + '<br><br>');  
+  
+  </script>
+    
+    
+
+</body>
+
+</html>

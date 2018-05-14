@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, 
+  initial-scale=1.0">
+  <title>Javascript alapok</title>
+  <link rel="stylesheet" href="tomb_1.css">
+
+  <script>
+
+    function ar_szerint(a, b) {
+      x = a[3];
+      y = b[3];
+      if (x > y) {
+          return 1;
+          }
+      else if (x < y) {
+          return -1;
+      }
+      else {
+          return 0;
+      }
+    }
+    
+    function nev_szerint(a, b) {
+      x = a[1];
+      y = b[1];
+      if (x > y) {
+          return 1;
+          }
+      else if (x < y) {
+          return -1;
+      }
+      else {
+          return 0;
+      }
+    }
+    
+    
+    
+  </script>
+</head>
+
+<body>
+
+<script>
+  
+  //var gyumolcsok = [ ["narancs","narancssárga", 400], ["banán","sárga", 250], ["alma", "zöld", 300], ["szilva", "lila", 350] ];
+  var gyumolcsok = [];
+  
+  gyumolcsok[0] = ["a"," narancs"," narancssárga",400];
+  gyumolcsok[1] = ["a"," banán"," sárga",250];
+  gyumolcsok[2] = ["az"," alma"," zöld",300];
+  gyumolcsok[3] = ["a"," szilva"," lila",350];
+  
+  gyumolcsok.sort();
+  
+  for ( i = 0; i < gyumolcsok.length; i++) {
+    document.write(gyumolcsok[i] + '<br><br>');
+  }
+  
+  document.write('<hr>');
+  
+  //ár szerint
+  gyumolcsok.sort(ar_szerint);
+  
+  document.write('Ár szerint: ' + '<br><br>');
+  
+  for ( i = 0; i < gyumolcsok.length; i++) {
+    document.write(gyumolcsok[i][3] + '<br><br>');
+  }
+    
+  document.write('<hr>');
+  
+  //név szerint
+  gyumolcsok.sort(nev_szerint);
+  
+  document.write('Név szerint: ' + '<br><br>');
+  
+  for ( i = 0; i < gyumolcsok.length; i++) {
+    document.write(gyumolcsok[i] + '<br><br>');
+  }
+  
+  
+  </script>
+    
+    
+
+</body>
+
+</html>

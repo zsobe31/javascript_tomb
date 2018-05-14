@@ -1,0 +1,86 @@
+
+#table {
+  width: 750px;
+}
+
+#cella1 {
+  text-align: center;
+  font-family: fantasy;
+  font-size: 26px;
+  letter-spacing: normal;
+}
+
+#div1 {
+  height: 50px;
+}
+
+#cella_1 {
+  width: 150px;
+  background: url(kepek/ures%20m%C3%A1solat.png);
+  text-align: right;
+}
+
+.golyok {
+  height:;
+}
+
+.szam {
+  font-family: monospace;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  border: 0px;
+  background: none;
+  width: 126px;
+  text-align: center;
+  margin-top: ;
+}
+
+#cella_2 {
+  width: 150px;
+  background: url(kepek/ures%20m%C3%A1solat.png);
+  text-align: right;
+}
+
+#cella_3 {
+  width: 150px;
+  background: url(kepek/ures%20m%C3%A1solat.png);
+  text-align: right;
+}
+
+#cella_4 {
+  width: 150px;
+  background: url(kepek/ures%20m%C3%A1solat.png);
+  text-align: right;
+}
+
+#cella_5 {
+  width: 150px;
+  background: url(kepek/ures%20m%C3%A1solat.png);
+  text-align: right;
+}
+
+#sor2 {
+  height: 150px;
+}
+
+#cella2 {
+  text-align: center;
+}
+
+#also {
+  height: 50px;
+}
+
+#sorsolas {
+  font-size: 16px;
+}
+
+#rendez {
+  font-size: 16px;
+  display: none;
+}
+
+#alap {
+  width: 80%;
+}

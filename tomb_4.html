@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, 
+  initial-scale=1.0">
+  <title>Javascript alapok</title>
+  <link rel="stylesheet" href="tomb_1.css">
+
+  <script>
+    function veletlen(a, b) {
+      return 0.5 - Math.random();
+    }
+    
+    function szamsorrend(a, b) {
+      if ( a > b) {
+          return 1;
+          }
+      else if ( a < b) {
+          return -1;
+      }
+      else {
+          return 0;
+      }
+    }
+    
+    function atalakit(tomb) {
+      tomb[0] = "kettő";
+      // alert(tomb);
+    }
+    
+  </script>
+</head>
+
+<body>
+
+  <script>
+    var szamok = [];
+
+    for (i = 1; i <= 90; i++) {
+      szamok[i - 1] = i;
+    }
+
+    szamok.sort(veletlen);
+
+    document.write('Számok véletlen sorrendben: ');
+    for (i = 0; i < szamok.length; i++) {
+      document.write(szamok[i] + ' ');
+    }
+
+    document.write('<br><br>');
+
+    var lotto = [];
+    lotto = szamok.slice(10, 15); // az elsö szám - innen indul, második szám - eddig tart! Ha a második szám negatív, akkor a tömb végéről számolva! -3 -> a tömb utolsó 3 eleme
+
+    document.write('Lottószámok: ');
+    for (i = 0; i < lotto.length; i++) {
+      document.write(lotto[i] + ' ');
+    }
+    
+    document.write('<br><br>');
+
+    lotto.sort(szamsorrend);
+    
+    document.write('Lottózámok sorrendben: ');
+    for ( i = 0; i < lotto.length; i++) {
+      document.write(lotto[i] + ' ');
+    }
+    
+    // tömb elemeinek átalakítása, a TELJES tömb átadása! Az eredeti tömb elmek megváltoztatása!
+    document.write('<br><br>');
+    
+    var egyik = [2,4,6,8,10];
+    
+    atalakit(egyik);
+    
+    document.write(egyik + '<br>');
+    
+    // tömb elemeinek átalakítása, a tömb ELEMINEK átadása! Az eredeti tömb elemek nem változnak meg!
+    document.write('<br><br>');
+    
+    var egyik = [2,4,6,8,10];
+    
+    atalakit(egyik.slice());
+    
+    document.write(egyik + '<br>');
+    
+    document.write('<br><br>');
+    
+    var egyik = [2,4,6,8,10];
+    var masik = [];
+    
+    masik = egyik; // teljes megegyezés!
+    masik = egyik.slice(); // a tömb tartalmát adjuk át, nincs megegyezés!
+    // atalakit(egyik);
+    egyik[4] = "tíz";
+    masik[2] = "hat";
+    
+    document.write('Eredeti: ' + egyik + '<br>');
+    document.write('Másolat: ' + masik + '<br>');
+    
+    
+  </script>
+
+</body>
+
+</html>

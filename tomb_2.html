@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, 
+  initial-scale=1.0">
+  <title>Javascript alapok</title>
+  <link rel="stylesheet" href="tomb_1.css">
+
+  
+
+</head>
+
+<body>
+
+  <script>
+   
+    var szamok = [];
+    
+    for ( i = 1; i <= 15; i++) {
+      szamok[i - 1] = i;
+    }
+    
+    document.write(szamok + '<br><br>');
+   
+    szamok.push(67,45,76,24,85,23,83,234,86);
+    
+    for ( i = 0; i < szamok.length; i++) {
+      document.write(szamok[i] + ' ');
+    }
+  </script>
+  
+</body>
+
+</html>

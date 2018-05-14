@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, 
+  initial-scale=1.0">
+  <title>Javascript alapok</title>
+  <link rel="stylesheet" href="tomb_1.css">
+
+  <script>
+
+    function veletlen(a, b) {
+      return 0.5 - Math.random();
+    }
+    
+    function holvan(miben, mit) {
+      for (i = 0; i < miben.length; i++) {
+        if (miben[i] == mit) {
+            return i;
+        } 
+      }
+      return -1;
+    }
+    
+  </script>
+</head>
+
+<body>
+
+<script>
+  
+  var autok = ["Fiat", "Vw", "Nissan", "Audi", "Opel"];
+  
+  autok.sort(veletlen);
+  
+  document.write(autok + '<br><br>');
+  
+  var hol = holvan(autok, "Nissan");
+  
+  document.write('Nissan indexe: ' + (hol+1) + '<br><br>');
+
+  autok.splice(hol, 1, "BMW", "Ford");
+  
+  document.write(autok + '<br><br>');
+  
+  </script>
+    
+    
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, 
+  initial-scale=1.0">
+  <title>Javascript alapok</title>
+  <link rel="stylesheet" href="tomb_1.css">
+
+  
+
+</head>
+
+<body>
+
+  <script>
+   
+    for ( i = 1; i < 5; i++) {
+      document.write(i+'<br>');
+    }
+    
+    // var gyumolcsok = new Array(); - lehetőség 1!
+    // var gyumolcsok = []; - lehetőség -2!
+    // var gyumolcsok = ["banán","narancs","alma","szilva"];
+    
+    var gyumolcsok = [];
+    
+    gyumolcsok[0] = "banán";
+    gyumolcsok[1] = "narancs";
+    gyumolcsok[2] = "alma";
+    gyumolcsok[3] = "szilva";
+    
+    document.write(gyumolcsok + '<br><br>');
+    
+    // gyumolcsok[4] = "körte"; - lehetőség az elem hozzáadására
+    // gyumolcsok.push("körte","barack"); - elem hozzá a tömb végére!
+    // új elemek a tömb elejéhez!
+    gyumolcsok.unshift("eper", "meggy");
+    
+    document.write(gyumolcsok + '<br><br>');
+    
+  </script>
+  
+</body>
+
+</html>
